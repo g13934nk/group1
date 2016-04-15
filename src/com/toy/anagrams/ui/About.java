@@ -54,6 +54,7 @@ public class About extends JDialog {
         int x = Math.max(0, parentBounds.x + (parentBounds.width - size.width) / 2);
         int y = Math.max(0, parentBounds.y + (parentBounds.height - size.height) / 2);
         setLocation(new Point(x, y));
+        System.out.println("藤野、星野、中村「野々村議員」");
     }
 
     /** This method is called from within the constructor to
