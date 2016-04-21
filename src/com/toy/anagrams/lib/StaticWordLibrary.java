@@ -86,15 +86,12 @@ final class StaticWordLibrary extends WordLibrary {
         "vertex",
         "unsigned",
         "traditional"};
-    
-    private static void main(String[]args) throws  Exception {
-        List<String> list=Arrays.asList(WORD_LIST);
 
+    	public static void main(String[] args) {
+    	String[] SCRAMBLED_WORD_LIST = WORD_LIST;
+        List<String> list=Arrays.asList(SCRAMBLED_WORD_LIST);
         Collections.shuffle(list);
-
-        String[] array2 =(String[])list.toArray(new String[list.size()]);
-
-        String SCRAMBLED_WORD_LIST = array2[0];
+        SCRAMBLED_WORD_LIST = (String[])list.toArray(new String[0]);
     };
     
     final static WordLibrary DEFAULT = new StaticWordLibrary();
@@ -120,7 +117,7 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
-        return SCRAMBLED_WORD_LIST[idx];
+        return WORD_LIST[idx];
     }
 
     /**
