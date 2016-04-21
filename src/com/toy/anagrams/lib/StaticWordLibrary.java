@@ -30,6 +30,10 @@
 /* Anagram Game Application */
 
 package com.toy.anagrams.lib;
+import java.util.Random;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Implementation of the logic for the Anagram Game application.
@@ -82,53 +86,15 @@ final class StaticWordLibrary extends WordLibrary {
         "vertex",
         "unsigned",
         "traditional"};
+    
+    private static void main(String[]args) throws  Exception {
+        List<String> list=Arrays.asList(WORD_LIST);
 
-    private static final String[] SCRAMBLED_WORD_LIST = {
-        "batsartcoin",
-        "maibuguos",
-        "ratimhteci",
-        "abkclssha",
-        "ibmtpa",
-        "iccrmutsnaec",
-        "ocbmnitaoni",
-        "ocsnqeeutnyl",
-        "ocsnroitmu",
-        "edrcmeneitgn",
-        "edepdnneyc",
-        "idasbmgiauet",
-        "ydanicm",
-        "neacsplutaoni",
-        "qeiuaveltn",
-        "xerpseisno",
-        "aficilatet",
-        "rfgaemtn",
-        "ehaxedicalm",
-        "milpmeneatitno",
-        "niidtsniugsiahleb",
-        "niehiratcen",
-        "nietnret",
-        "ajav",
-        "olacilazitno",
-        "imrcpoorecssro",
-        "anivagitno",
-        "poitimazitno",
-        "aparemert",
-        "aprtcki",
-        "ipkcel",
-        "opylomprich",
-        "irogorsuyl",
-        "isumtlnaoesuyl",
-        "psceficitaoni",
-        "tsurtcreu",
-        "elixalc",
-        "ilekiwse",
-        "amanegemtn",
-        "aminupalet",
-        "amhtmetacsi",
-        "ohjtvaa",
-        "evtrxe",
-        "nuisngde",
-        "rtdatioialn"
+        Collections.shuffle(list);
+
+        String[] array2 =(String[])list.toArray(new String[list.size()]);
+
+        String SCRAMBLED_WORD_LIST = array2[0];
     };
     
     final static WordLibrary DEFAULT = new StaticWordLibrary();
